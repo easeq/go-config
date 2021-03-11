@@ -27,7 +27,7 @@ var (
 
 // NewEnvConfig adds env config to struct
 func NewEnvConfig(cfg EnvConfig) EnvConfig {
-	err := cfg.UnmarshalEnv(envSet)
+	err := cfg.UnmarshalEnv(EnvSet())
 	if err != nil {
 		panic(ErrEnvConfigLoad)
 	}
