@@ -28,6 +28,7 @@ var (
 // NewEnvConfig adds env config to struct
 func NewEnvConfig(cfg EnvConfig) EnvConfig {
 	es := EnvSet()
+	log.Println("goconfig: env-set", es)
 	err := cfg.UnmarshalEnv(es)
 	if err != nil {
 		panic(ErrEnvConfigLoad)
